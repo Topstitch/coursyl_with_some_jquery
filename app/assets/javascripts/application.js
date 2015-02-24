@@ -30,19 +30,13 @@ function greyOut(){
 }
 
 function hideSection(){
-  if (document.getElementById("grade_list")!= "null"){
-    var section = document.getElementById("grade_list");
-    var last = section.lastElementChild;
-    last.style.display = 'none';
-  }
+    var section = $("#grade_list").children().last();
+    section.css("display", "none");
 }
 
 function addRow(){
-  if (document.getElementById("grade_list")!= "null"){
-    var section = document.getElementById("grade_list");
-    var last = section.lastElementChild;
-    last.style.display = 'block';
-  }
+  var section = $("#grade_list").children().last();
+  section.css("display", "block");
 }
 
 function deleteRow(event){
