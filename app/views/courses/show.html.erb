@@ -145,6 +145,7 @@
 
 
 <% else %>
+
   <section>
     <a id="anchor-assignments" class="anchor-course"></a>
     <% if current_user && current_user.teaching?(@course) &&
@@ -155,6 +156,7 @@
             class: "btn btn-success" %>
       </h3>
     <% end %>
+    <%= render partial: 'modal_edit_course_time' %>
     <h3><i class="fa fa-pencil"></i> Assignments</h3>
     <% if @course.assignments.present? %>
       <div class="progress progress-striped">
