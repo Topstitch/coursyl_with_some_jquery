@@ -156,7 +156,7 @@
             class: "btn btn-success" %>
       </h3>
     <% end %>
-    <%= render partial: 'modal_edit_course_time' %>
+
     <h3><i class="fa fa-pencil"></i> Assignments</h3>
     <% if @course.assignments.present? %>
       <div class="progress progress-striped">
@@ -207,6 +207,7 @@
             <td><%= percentage(a.percent_of_grade) %></td>
             <td class="text-right">
               <%= render partial: "/assignments/row_buttons", locals: {assignment: a} %>
+              <%= render partial: 'modal_edit_course_time', locals: {assignment: a} %>
             </td>
           </tr>
         <% end %>
